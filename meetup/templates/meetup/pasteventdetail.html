@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PastEvents</title>
+</head>
+<body>
+<form action="{% url 'comment' object.id %}" method="POST">
+    {% csrf_token %}
+    {{object.Topic}}
+    {% for i in list %}
+        {% if object.id == i.pastevents.id %}
+            {{i.user.username}}:
+            {{i.comment}}
+        {% endif %}
+    {% endfor %}
+    <form method="POST">
+      Comment: <input name="comment">
+      <input id="submit" type="submit" value="Click" data_url/>
+    </form>
+</form>
+<script>
+$(function(){
+     $('form').on('submit', function(e){
+         e.preventDefault();
+         $.ajax({
+             url: $(this).attr('action'),
+             method: $(this).attr('method'),
+             success: function(data){ $('#target').html(data) }
+         });
+     });
+});
+</script>
+</body>
+</html>

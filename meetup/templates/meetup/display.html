@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/paper/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/meetup/css/index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+	<div class="row">
+ <div class="jumbotron">
+            <h1 class="blue" style="color:#2196F3;">Material Design Like Cards </h1>
+            <h3 class="blue">With Headers</h3>
+
+        </div>
+    </div>
+          <!--small cards-->
+        <div class="row">
+        		{% for UpComingMeetups in object_list %}
+              {% if UpComingMeetups.Date < now %}
+              <div class="col-md-4">
+              <div class="card">
+                      <div class="card-content">
+                        <div class="card-header-blue">
+                             <h1 class="card-heading">{{ UpComingMeetups.Heading }}</h1>
+                          </div>
+                          <div class="card-body">
+                          <p class="card-p">
+                                  {{ UpComingMeetups.Description }}
+                              </p>
+                        </div>
+
+                        <nav class="nav-tabs">
+                          <ul class="nav nav-pills pull-left">
+                                  <li class="card-action"><a href="{% url 'display' UpComingMeetups.id %}">Link</a></li>
+                              </ul>
+
+                        </nav>
+
+                      </div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+
+        </div>
+      </div>
+</body>
+</html>
