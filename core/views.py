@@ -15,6 +15,7 @@ class MeetupDetailView(DetailView):
     model = Meetup
     form_class = NotifyMeForm
     template_name = 'core/meetup_detail.html'
+    slug_url_kwarg = 'slug'
 
     def get_context_data(self, **kwargs):
         context = super(MeetupDetailView, self).get_context_data()

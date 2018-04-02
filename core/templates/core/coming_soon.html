@@ -6,6 +6,12 @@
 </head>
 <body>
 
+<h1>{{ object.name }}</h1>
+
+<h2>Comming soon</h2>
+
+<h5>Date: {{ object.date }}</h5>
+
 <form method="post"> {% csrf_token %}
     {{ form }}
     <input type="submit">

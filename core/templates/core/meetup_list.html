@@ -6,5 +6,9 @@
 </head>
 <body>
 
+    {% for meetup in object_list %}
+        <a href="{% url 'meetup-detail' meetup.slug %}">{{ meetup.name }}</a>
+    {% endfor %}
+
 </body>
 </html>
