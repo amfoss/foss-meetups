@@ -16,8 +16,9 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from core.views import MeetupListView, MeetupDetailView
+
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^accounts/', include('django.contrib.auth.urls')),
-    url(r'meetup/', include('core.urls')),
+    url(r'^$', MeetupListView.as_view(), name='meetup-list'),
+    url(r'^(?P<slug>\w+)/$', MeetupDetailView.as_view(), name='meetup-detail')
 ]

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
 	<title>Login V1</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'auth/css/util.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'auth/css/main.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'registration/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'registration/css/main.css' %}">
 <!--===============================================================================================-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -16,7 +17,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="{% static 'auth/image/img-01.png' %}" alt="IMG">
+					<img src="{% static 'registration/image/img-01.png' %}" alt="IMG">
 				</div>
 
 				<form class="login100-form validate-form" method="POST">
@@ -57,7 +58,7 @@
 					</div>
 
 					<div class="text-center p-t-136">
-						<a class="txt2" href="{% url 'register' %}">
+						<a class="txt2" href="">
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
