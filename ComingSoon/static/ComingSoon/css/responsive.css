@@ -1,0 +1,405 @@
+/*    iPad and mini pc 1200px+. */
+
+@media only screen and (max-width: 1200px) {
+
+.marshall-col-content, 
+.marshall-col-screen {
+  height: auto;
+  padding: 70px 0;
+  position: relative;
+  width: 100%;
+}
+.marshall-logo {
+  margin-bottom: 40px;
+  margin-top: 0;
+  position: relative;
+}
+.marshall-content {
+  position: relative;
+  top: inherit !important;
+}
+.marshall-social-column {
+  bottom: inherit;
+  left: 15%;
+  margin-top: 85px;
+  position: relative;
+  width: 70%;
+}
+.marshall-col-6, 
+.marshall-col-6 .marshall-animate-content {
+  width: 100%;
+}
+.marshall-col-screen {
+  display: none;
+  min-height: 400px;
+}
+.display_in_mobile {
+  display: block !important;
+}
+.mrs-v9 .marshall-col-screen {
+  min-height: 450px;
+}
+#marshall-details {
+  animation: 0s ease 0s normal none 1 running none;
+  position: relative;
+  transform: none;
+  visibility: visible;
+  width: 100%;
+}
+.marshall-main-content {
+ position: relative;
+}
+.marshall-gallery-item a:hover .mask-overley {
+  border: 100px solid rgba(0, 0, 0, 0.7);
+}
+.marshall-the_content {
+  padding: 60px 50px 40px;
+}
+.marshall-logo,
+.marshall-content {
+  margin-left: 50px;
+}
+.marshall-social-column {
+  left: 50px;
+  width: calc(100% - 50px);
+}
+.morph-button-modal-2.open .morph-content {
+  height: 464px;
+  margin-top: -232px;
+  top: 50% !important;
+  left: 50% !important;
+  transform: none !important;
+  margin-left: -220px !important;
+}
+.align-center .marshall-logo {
+  margin: auto;
+  position: relative;
+  transform: none;
+  width: 130px;
+}
+canvas {
+  height: 100%;
+}
+.marshall-col-screen.marshall-screen-left {
+  display: block;
+  padding: 20px 0;
+  width: 100%;
+}
+.marshall-col-5, 
+.marshall-col-5 .marshall-animate-content {
+  width: 100%;
+}
+.marshall-col-7 .marshall-content {
+  transform: none;
+  width: calc(100% - 40px);
+}
+body.mrs-v6 .marshall-social-column {
+  bottom: 20px;
+  position: absolute;
+}
+.marshall-static-content, 
+.marshall-full-contact-area {
+  height: auto;
+  left: inherit;
+  margin: auto;
+  position: relative;
+  top: inherit;
+  transform: none;
+}
+body.mrs-v7 .marshall-col-screen {
+  display: block;
+  position: relative;
+}
+.marshall-col-6.marshall-middle-6.marshall-col-content {
+  height: 100vh;
+  margin-left: 0;
+  min-height: 640px;
+  position: relative;
+  text-align: center;
+}
+.marshall-middle-6.marshall-col-content .marshall-content {
+  margin-left: 50px;
+  position: absolute;
+  top: calc(50% - 165.467px) !important;
+  width: calc(100% - 100px);
+}
+.display_in_mobile .marshall-content {
+  top: 50% !important;
+}
+.marshall-middle-6 .marshall-social-column {
+  bottom: 15px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.short_description {
+  margin: auto;
+  max-width: 70%;
+  text-align: center;
+}
+
+body.mrs-v15 .marshall-col-6.marshall-middle-6.marshall-col-content {
+  position: relative;
+  min-height: auto;
+}
+body.mrs-v15 .marshall-middle-6 .marshall-logo {
+  left: inherit;
+  margin: auto;
+  position: relative;
+  transform: none;
+}
+body.mrs-v15 .marshall-middle-6.marshall-col-content .marshall-content {
+  margin: auto;
+  position: relative;
+  top: inherit;
+  transform: none;
+  width: 96%;
+}
+body.mrs-v15 .marshall-container {
+  min-height: 600px;
+  position: relative;
+}
+.marshall-rocekt-main {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(0.6);
+  width: 100%;
+}
+.marshall-container {
+  position: relative;
+  width: 100%;
+}
+
+.mrs-white .default_mrs_newsletter.mrs_inline_newsletter .marshall-newsletter-content {
+  margin-bottom: 15px;
+}
+.bg-container {
+  min-height: 640px;
+}
+body.mrs-v46.mrs-fill {
+  color: #111;
+}
+.mrs-v50 .marshall-social-column {
+  bottom: 15px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: auto;
+  z-index: 9;
+}
+
+
+
+}
+
+
+
+/*    Wide Mobile Layout: 480px+. */
+
+@media only screen and (max-width: 767px) {
+
+body {
+    font-size: 14px;
+}
+
+.default_mrs_newsletter.mrs_inline_newsletter .marshall-newsletter-content {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.short_description {
+  max-width: 90%;
+}
+
+.marshall-middle-6.marshall-col-content .marshall-content,
+.marshall-middle-6.marshall-col-content .marshall-content.jquery-center {
+  margin-left: 20px;
+  position: relative;
+  top: inherit !important;
+  width: calc(100% - 40px);
+}
+.marshall-middle-6 .marshall-logo {
+  left: inherit;
+  margin-left: 0;
+  position: relative;
+  transform: none;
+}
+.mrs-v8 .marshall-middle-6 .fat_title,
+.mrs-v13 .marshall-middle-6 .fat_title,
+.mrs-v11 .marshall-middle-6 .fat_title,
+.mrs-v28 .marshall-middle-6 .fat_title,
+.mrs-v29 .marshall-middle-6 .fat_title,
+.mrs-v20 .marshall-middle-6 .fat_title {
+  font-size: 2.7em;
+}
+.mrs-v19 .stay_connent_with_social li {
+  display: inline-block;
+}
+.bottom-separator {
+  border-bottom: 1px solid transparent;
+}
+.mrs-v23 .marshall-col-10.marshall-middle-10.marshall-col-content,
+.mrs-v24 .marshall-col-10.marshall-middle-10.marshall-col-content  {
+  margin-left: 0;
+}
+.marshall-logo.marshall-top-left {
+  left: inherit;
+  position: relative;
+  text-align: center;
+  transform: none;
+}
+.mrs-v50 .marshall-social-column {
+  bottom: 15px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  transform: none;
+  width: 100%;
+  z-index: 9;
+}
+.marshall-main-content {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+
+}
+
+
+
+
+
+/*    Mobile Layout: 479px. */
+
+@media only screen and (max-width: 479px) {
+
+.morph-button-modal-2.open .morph-content {
+  margin-left: -150px !important;
+  width: 300px;
+}
+.marshall-newsletter-inner {
+  padding: 0 20px;
+}
+.marshall-newsletter-inner .marshall-newsletter-content {
+  margin: 35px auto auto;
+  width: 100%;
+}
+h1, .h1 {
+    font-size: 2em;
+}
+.marshall-logo {
+  margin-left: 20px;
+} 
+.marshall-content {
+    margin-left: 20px;
+    width: calc(100% - 40px);
+}
+.marshall-social-column {
+    left: 20px;
+    width: calc(100% - 20px);
+}
+.marshall-the_content {
+    padding: 45px 20px 40px;
+}
+.morph-button.morph-button-modal-2, .morph-button.morph-button-modal-3 {
+  display: inline-block;
+  margin: 0px 10px 15px 0;
+}
+.marshall-btn.marshall-btn-text {
+  border: 1px solid;
+  padding: 9px 43px;
+}
+.stay_connent_with_social li {
+  display: block;
+  margin-bottom: 15px;
+}
+.marshall-middle-6 .stay_connent_with_social li {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.marshall-middle-6 .stay_connent_with_social {
+  width: 98%;
+}
+.marshall-middle-6 .fat_title {
+  font-size: 4em;
+  font-weight: 800;
+  margin-top: 10px;
+}
+.marshall-simple-content h2 {
+  font-size: 1.7em;
+}
+.mrs-v20 .stay_connent_with_social,
+.mrs-v22 .stay_connent_with_social,
+.mrs-v28 .stay_connent_with_social,
+.mrs-v29 .stay_connent_with_social,
+.mrs-v31 .stay_connent_with_social,
+.mrs-v13 .stay_connent_with_social,
+.mrs-v32 .stay_connent_with_social{
+  bottom: 55px;
+  right: 0;
+  width: 100%;
+  z-index: 9;
+}
+.mrs-v20 .stay_connent_with_social li,
+.mrs-v22 .stay_connent_with_social li,
+.mrs-v28 .stay_connent_with_social li,
+.mrs-v29 .stay_connent_with_social li,
+.mrs-v13 .stay_connent_with_social li,
+.mrs-v31 .stay_connent_with_social li,
+.mrs-v32 .stay_connent_with_social li,
+.stay_connent_with_social.marshall-top-right li,
+.stay_connent_with_social.marshall-left-center li{
+  display: inline-block;
+}
+.mrs-v20 .position_footer.align-left,
+.mrs-v22 .position_footer.align-left,
+.mrs-v28 .position_footer.align-left,
+.mrs-v29 .position_footer.align-left,
+.mrs-v13 .position_footer.align-left,
+.mrs-v31 .position_footer.align-left,
+.mrs-v32 .position_footer.align-left {
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+.stay_connent_with_social.marshall-top-right,
+.stay_connent_with_social.marshall-left-center {
+  bottom: 0;
+  left: 0;
+  top: inherit;
+  width: 100%;
+  z-index: 9;
+}
+.coundown-border-inline .simply-section {
+  height: 78px;
+  width: 78px;
+}
+.mrs-v50 .coundown-border-inline .simply-section {
+  height: 65px;
+  width: 65px;
+}
+.mrs-v50 .simply-amount {
+  font-size: 2em;
+}
+.mrs-v50 .simply-section span.simply-word {
+  font-size: 0.6em;
+}
+.marshall-gallery-item h2 {
+  left: 0;
+  text-align: center;
+  -webkit-transform: translateY(-50%) translateX(0) scale(0);
+  transform: translateY(-50%) translateX(0%) scale(0);
+  width: 100%;
+}
+.marshall-gallery-item a:hover h2 {
+  -webkit-transform: translateY(-50%) translateX(0) scale(1);
+  transform: translateY(-50%) translateX(0%) scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+}
+
+
