@@ -102,3 +102,8 @@ class CallForPaper(models.Model):
 
     def __str__(self):
         return self.topic
+
+
+class NotifyMeEmail(models.Model):
+    meetup = models.ForeignKey(Meetup, on_delete=models.CASCADE)
+    email = models.EmailField()

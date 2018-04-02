@@ -20,5 +20,5 @@ from core.views import MeetupListView, MeetupDetailView
 
 urlpatterns = [
     url(r'^$', MeetupListView.as_view(), name='meetup-list'),
-    url(r'^(?P<slug>\w+)/$', MeetupDetailView.as_view(), name='meetup-detail')
+    url(r'^(?P<pk>\d+)/$', MeetupDetailView.as_view(), name='meetup-detail')
 ]

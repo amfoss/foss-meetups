@@ -6,5 +6,18 @@
 </head>
 <body>
 
+<form method="post"> {% csrf_token %}
+    {{ form }}
+    <input type="submit">
+</form>
+
+{% if success %}
+    <p>Successful</p>
+{% endif %}
+
+{% if duplicate %}
+    <p>Error: you have already subscribed to this meetup</p>
+{% endif %}
+
 </body>
 </html>
