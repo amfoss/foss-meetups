@@ -11,3 +11,7 @@ class MeetupListView(ListView):
 class MeetupDetailView(DetailView):
     model = Meetup
     slug_url_kwarg = 'slug'
+
+    def get_template_names(self):
+        if self.get_object().comming_soon:
+            template_name = 'core/comming_soon.html'
