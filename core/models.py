@@ -41,6 +41,7 @@ class Speaker(models.Model):
 
 class Meetup(models.Model):
     name = models.CharField(max_length=100)
+    slug = models.CharField(max_length=100)
     date = models.DateTimeField()
     location = models.CharField(max_length=500)
     tag_line = models.CharField(max_length=300)
