@@ -21,4 +21,5 @@ from Meetups import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^meetups/', include('meetup.urls')),
+    url(r'^comingSoon/', include('ComingSoon.urls')),
 ]
