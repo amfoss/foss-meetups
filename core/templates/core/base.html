@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<title>{% block title %} {% endblock %}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->
+
+<!--============================== Custom css =====================================================-->
+    {% block css %} {% endblock %}
+</head>
+
+<body>
+    {% block body %} {% endblock %}
+
+    {% block javascript %} {% endblock %}
+
+</body>
+
+</html>

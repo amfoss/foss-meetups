@@ -1,18 +1,9 @@
-<!DOCTYPE html>
+{% extends 'registration/base.html' %}
 {% load static %}
-<html lang="en">
-<head>
-	<title>Login V1</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'registration/css/util.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'registration/css/main.css' %}">
-<!--===============================================================================================-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
 
+{% block title %} Register {% endblock %}
+
+{% block body %}
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
@@ -67,3 +58,5 @@
 			</div>
 		</div>
 	</div>
+
+{% endblock %}
