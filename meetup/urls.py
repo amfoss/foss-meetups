@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^register/$', views.register, name='register'),
     url(r'^login/$', auth_views.login, {'template_name': 'meetup/login.html'}, name='login'),
     url(r'^index/$', index.as_view()),
+    url(r'^$', index.as_view()),
     url(r'^create/$', upcoming, name="create"),
     url(r'^done/$', done.as_view(), name="done"),
     url(r'^display/(?P<pk>\d+)/$', display.as_view(), name="display"),
