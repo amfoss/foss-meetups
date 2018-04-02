@@ -14,4 +14,4 @@ class MeetupDetailView(DetailView):
 
     def get_template_names(self):
         if self.get_object().comming_soon:
-            template_name = 'core/comming_soon.html'
+            self.template_name = 'core/coming_soon.html'
