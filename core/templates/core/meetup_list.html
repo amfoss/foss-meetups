@@ -8,42 +8,30 @@
 {% block body %}
     {% include 'core/navbar.html' %}
 
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-4">Meetups</h1>
-        <p class="lead">Quickly build an effective pricing table for your
-            potential customers with this Bootstrap example.</p>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-0 text-center header">
+      <div class="offset-md-8 col-md-4 p-lg-5 my-5">
+        <h1 class="display-4 font-weight-norma text-white">Meetup</h1>
+        <p class="lead font-weight-normal text-white">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.</p>
+      </div>
     </div>
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="card-deck mb-3 text-center">
 
         {% for meetup in object_list %}
-            <div class="card mb-4 box-shadow">
-                <div class="card-header">
-                    <h4 class="my-0">{{ meetup.name }}</h4>
-                </div>
+            <div class="card box-shadow">
+                <img class="card-img-top" src="/media/{{ meetup.image }}" alt="Image">
                 <div class="card-body">
-                    <h3 class="card-title pricing-card-title">
-                        {{ meetup.date | date }}
-                    </h3>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li >{{ meetup.tag_line|truncatechars:120 }}</li>
-
-                    </ul>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>{{ meetup.location }}</li>
-                        <li class="text-secondary"><small>Brought to you by: </small>
+                    <p class="text-muted card-title"> <small>
+                        {{ meetup.date | date:"l, d F Y" }}
+                    </small></p>
+                    <h5 class="card-title">{{ meetup.name }}</h5>
+                    <p>
+                        <small>Brought to you by:
                             <a href="{{ meetup.team.web_page }}">
                                 {{ meetup.team.name }}
-                            </a>
-                        </li>
-                    </ul>
-                    <a  href="{% url 'meetup-detail' meetup.slug %}">
-                        <button type="button"
-                            class="btn btn-lg btn-block btn-outline-primary">
-                            Register
-                        </button>
-                    </a>
+                            </a> </small>
+                    </p>
 
                 </div>
             </div>

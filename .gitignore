@@ -8,4 +8,4 @@ __pycache__
 !/.gitignore
 local_settings.py
 ./static/
-./media/
+media/
