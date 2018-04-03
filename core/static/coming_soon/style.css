@@ -622,6 +622,7 @@ ul.marshall-social-links {
   list-style: outside none none;
   margin: 0 0 0 10px;
   padding: 0;
+  color: #000;
 }
 ul.marshall-social-links li {
   display: inline-block;
