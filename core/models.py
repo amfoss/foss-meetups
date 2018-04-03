@@ -5,7 +5,7 @@ from django.db import models
 class Team(models.Model):
     admin = models.OneToOneField(
         User, on_delete=models.SET_NULL, null=True, related_name='admin')
-    team_name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     tag_line = models.CharField(max_length=300)
     description = models.TextField()
     location = models.CharField(max_length=500)
@@ -23,7 +23,7 @@ class Team(models.Model):
         User, on_delete=models.SET_NULL, null=True, related_name='created_by')
 
     def __str__(self):
-        return self.team_name
+        return self.name
 
 
 class Speaker(models.Model):
@@ -52,7 +52,7 @@ class Meetup(models.Model):
     is_open_till = models.DateTimeField()
 
     team = models.ForeignKey(
-        User, on_delete=models.SET_NULL, null=True, related_name='team')
+        Team, on_delete=models.SET_NULL, null=True, related_name='team')
 
     created_date = models.DateTimeField(auto_created=True)
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
