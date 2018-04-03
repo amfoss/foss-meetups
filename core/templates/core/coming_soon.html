@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 {% load static %}
-{% block content %}
     <head>
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Marshall v32 - Ultimate Coming Soon Template</title>
+        <title>{{ meetup.name }}</title>
         <meta name="description" content="Marshall - Ultimate Coming Soon Template by pixiefy">
         <meta name="author" content="pixiefy">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +14,7 @@
 
         <!-- All CSS -->
         <link rel="stylesheet" type="text/css" href="{% static 'coming_soon/css/normalize.css' %}"/>
-        <link rel="stylesheet" type="text/css" href="{% static 'coming_soon/font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'coming_soon/css/font-awesome.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'coming_soon/css/animate.css' %}">
         <link rel="stylesheet" href="{% static 'coming_soon/css/style.css' %}"/>
         <link rel="stylesheet" href="{% static 'coming_soon/style.css' %}">
@@ -30,16 +29,20 @@
     <div class="marshall-container">
         <div class="marshall-col-6 marshall-middle-6 marshall-col-content">
             <div class="marshall-logo fadeIn fast">
-                <h1> meetup.amfoss.in</h1>
+                <h1><small><a href="{{ meetup.team.web_page }}"> {{ meetup.team.name }} </a></small></h1>
                 <!-- <img src="{% static 'coming_soon/images/logo-dark.png' %}" alt="Marshall Logo"> -->
             </div>
             <div class="marshall-content jquery-center">
-                <h1 class="fadeIn medium">We're launching our<br> <span>new Website</span></h1>
-                <p class="short_description">We are working really  hard to lauch our platform. Moreover, we are really
-                excited to conduct a meetup for the benifit of FOSS entusiasts.</p>
+                <h1 class="fadeIn medium"><span>{{ meetup.name }}</span></h1>
+                <p class="short_description">
+                    {{ meetup.date | date:"l, d F Y" }}
+                    <br><br>
+                    We are working really  hard to lauch our platform. Moreover, we are really
+                excited to conduct a meetup for the benifit of FOSS entusiasts.
+                </p>
                 <div class="marshall-button-group fadeIn slow">
                     <div class="morph-button morph-button-modal morph-button-modal-2 marshall-morph-modal morph-button-fixed">
-                        <button type="button">Notify Us</button>
+                        <button type="button">Notify Me</button>
                         <div class="morph-content marshall-newsletter-form">
                             <div class="marshall-newsletter-inner">
                                 <div class="content-style-form content-style-form-2">
@@ -77,25 +80,29 @@
                                                                                  aria-hidden="true"></i></span>
                                     <div class="marshall-newsletter-description">
                                         <h2>Sign Up</h2>
-                                        <p>Be first to know about the latest updates and get exclusive offer on our
-                                            grand opening</p>
+                                        <p>Be first to know about the latest updates</p>
                                     </div>
-                                    <form id="marshall-form" class="marshall-newsletter-content">
-                                        <input id="marshall-email" type="email" placeholder="Your Email">
+                                    <form id="marshall-form" class="marshall-newsletter-content" method="post">
+                                        {% csrf_token %}
+                                        <input id="marshall-email" type="email" name ="email" placeholder="Your Email">
                                         <button class="marshall_submit" type="submit">Subscribe</button>
                                         <label for="marshall-email"></label>
                                     </form>
                                 </div>
                             </div>
                         </div>
-                    </div><!-- morph-button -->
-                    <a class="marshall-btn marshall-content-view" href="#" title="">
-                        <i class="fa fa-info" aria-hidden="true"></i>
-                        Information
-                    </a>
+                    </div>
+                    {% if duplicate %}
+                        <p>You are already subscribed!</p>
+                    {% endif %}
+
+                    {% if success %}
+                        <p> Sucessfully suscribed :)</p>
+                    {% endif %}
                 </div>
             </div>
             <div class="marshall-social-column">
+
                 <p class="fadeIn fast">Stay in touch :</p>
                 <ul class="marshall-social-links">
                     <li><a class="fadeIn fast-child-1" href="#" title="Facebook"><i class="fa fa-facebook"
@@ -107,29 +114,13 @@
                     <li><a class="fadeIn fast-child-4" href="#" title="Facebook"><i class="fa fa-linkedin"
                                                                                     aria-hidden="true"></i></a></li>
                 </ul>
+                 <p class="fadeIn fast">| <a href="{% url 'meetup-list' %}"> Home</a></p>
+
             </div>
 
         </div>
     </div>
 
-
-    <div id="marshall-details" data-animation="mrs-lightSpeedIn" class="marshall-animate-content">
-        <div class="marshall-main-content">
-            <div class="marshall-the_content">
-                <h2>From FOSS@Amrita,</h2>
-
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-
-
-        </div>
-    </div>
-
-    <button id="marshall-close-content-slide" class="marshall-content-close"><i class="fa fa-times-thin fa-2x"
-                                                                                aria-hidden="true"></i></button>
 
 
     <!-- All marshall js files -->
@@ -137,7 +128,6 @@
     <script src="{% static 'coming_soon/js/classie.js' %}"></script>
     <script src="{% static 'coming_soon/js/uiMorphingButton_fixed.js' %}"></script>
     <script src="{% static 'coming_soon/js/form-init.js' %}"></script>
-    <script src="{% static 'coming_soon/js/jquery.ajaxchimp.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'coming_soon/js/v32/three.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'coming_soon/js/v32/Projector.js' %}"></script>
     <script type="text/javascript" src="{% static 'coming_soon/js/v32/CanvasRenderer.js' %}"></script>
@@ -394,5 +384,4 @@
     <script type="text/javascript" src="{% static 'coming_soon/js/main.js' %}"></script>
 
     </body>
-{% endblock %}
 </html>

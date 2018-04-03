@@ -20,12 +20,16 @@
 
         {% for meetup in object_list %}
             <div class="card box-shadow">
+                <a href="{% url 'meetup-detail' meetup.slug %}">
                 <img class="card-img-top" src="/media/{{ meetup.image }}" alt="Image">
+                    </a>
                 <div class="card-body">
+                    <a href="{% url 'meetup-detail' meetup.slug %}">
                     <p class="text-muted card-title"> <small>
                         {{ meetup.date | date:"l, d F Y" }}
                     </small></p>
                     <h5 class="card-title">{{ meetup.name }}</h5>
+                    </a>
                     <p>
                         <small>Brought to you by:
                             <a href="{{ meetup.team.web_page }}">
