@@ -1,14 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'core/base.html' %}
+{% load static %}
 
-    {% for meetup in object_list %}
-        <a href="{% url 'meetup-detail' meetup.slug %}">{{ meetup.name }}</a>
-    {% endfor %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}"/>
+{% endblock %}
 
-</body>
-</html>
+{% block body %}
+    {% include 'core/navbar.html' %}
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Meetups</h1>
+        <p class="lead">Quickly build an effective pricing table for your
+            potential customers with this Bootstrap example.</p>
+    </div>
+
+    <div class="container">
+        <div class="card-deck mb-3 text-center">
+
+        {% for meetup in object_list %}
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0">{{ meetup.name }}</h4>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title pricing-card-title">
+                        {{ meetup.date | date }}
+                    </h3>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li >{{ meetup.tag_line|truncatechars:120 }}</li>
+
+                    </ul>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>{{ meetup.location }}</li>
+                        <li class="text-secondary"><small>Brought to you by: </small>
+                            <a href="{{ meetup.team.web_page }}">
+                                {{ meetup.team.name }}
+                            </a>
+                        </li>
+                    </ul>
+                    <a  href="{% url 'meetup-detail' meetup.slug %}">
+                        <button type="button"
+                            class="btn btn-lg btn-block btn-outline-primary">
+                            Register
+                        </button>
+                    </a>
+
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        {% include 'core/footer.html' %}
+    </div>
+
+
+{% endblock %}
