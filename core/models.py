@@ -9,6 +9,7 @@ class Team(models.Model):
     tag_line = models.CharField(max_length=300)
     description = models.TextField()
     location = models.CharField(max_length=500)
+    image = models.ImageField(upload_to='/teams/')
 
     email = models.EmailField(blank=True)
     web_page = models.URLField(blank=True)

@@ -7,4 +7,5 @@ __pycache__
 .*
 !/.gitignore
 local_settings.py
-/static/
+./static/
+./media/
