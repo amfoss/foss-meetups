@@ -123,3 +123,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# Additional info like email configurations, passwords and secrete keys kept in separate     file during development
+from .local_settings import *
