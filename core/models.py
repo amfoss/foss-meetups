@@ -9,7 +9,7 @@ class Team(models.Model):
     tag_line = models.CharField(max_length=300)
     description = models.TextField()
     location = models.CharField(max_length=500)
-    image = models.ImageField(upload_to='/teams/')
+    image = models.ImageField(upload_to='images/teams/', blank=True)
 
     email = models.EmailField(blank=True)
     web_page = models.URLField(blank=True)
@@ -33,6 +33,7 @@ class Speaker(models.Model):
     organisation = models.CharField(max_length=200)
     designation = models.CharField(max_length=200)
     github = models.URLField()
+    image = models.ImageField(upload_to='images/speakers/', blank=True)
 
     about = models.TextField(blank=True)
 
@@ -47,6 +48,7 @@ class Meetup(models.Model):
     location = models.CharField(max_length=500)
     tag_line = models.CharField(max_length=300)
     description = models.TextField()
+    image = models.ImageField(upload_to='images/meetups/', blank=True)
 
     coming_soon = models.BooleanField(default=False)
     is_open = models.BooleanField(default=False)
@@ -78,7 +80,7 @@ class Talk(models.Model):
 
 class MeetupPhoto(models.Model):
     meetup = models.ForeignKey(Meetup, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='')
+    image = models.ImageField(upload_to='meetups/pics/', blank=True)
 
     def __str__(self):
         return self.meetup.name
@@ -94,7 +96,7 @@ class MeetupComments(models.Model):
         return self.meetup.name
 
 
-class CallForPaper(models.Model):
+class CallForProposals(models.Model):
     speaker = models.ForeignKey(Speaker, on_delete=models.CASCADE)
     meetup = models.ForeignKey(Meetup, on_delete=models.CASCADE)
     topic = models.CharField(max_length=300)
