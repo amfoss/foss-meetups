@@ -369,11 +369,11 @@ textarea {
   font-family: 'Ranga', cursive;
 }
 .marshall-btn {
-  background-color:#6666ff;
+  background-color:#f61067;
   border-radius: 0;
   display: inline-block;
   margin: 0 15px 0 0;
-  padding: 7px 30px 8px;
+  padding: 9px 30px 8px;
   -webkit-transition: all 0.1s linear 0s;
   transition: all 0.1s linear 0s;
   touch-action: manipulation;
@@ -381,7 +381,7 @@ textarea {
   white-space: nowrap;
   position: relative;
   color: #FFF;
-  border: 1px solid #6666ff;
+  border: 1px solid #f61067;
 }
 .marshall-btn.marshall-btn-text {
   background-color: transparent;
